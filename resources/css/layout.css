@@ -15,7 +15,7 @@
     src: url('../fonts/CircularStd-Bold.otf') format('truetype');
 }
 body {
-    font-family: 'CircularStd-Bold';
+    font-family: 'CircularStd-Bold', serif;
     font-size: 48px;
     background-image: url("../img/background.png");
 }
