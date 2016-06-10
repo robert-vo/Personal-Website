@@ -6,20 +6,52 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
     <link type="text/css" rel="stylesheet" href="../resources/css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/css">
+        ul {
+            height: 300px;
+            display: table;
+        }
+        li {
+            display: table-row;
+        }
+        li:before {
+            content:'•';
+            float: left;
+            width: 20px;
+            font-size: 1.8em;
+            line-height: 0.75em;
+        }
+    </script>
 </head>
 
 <body>
     <script type="text/javascript" src="../resources/js/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="../resources/js/materialize.min.js"></script>
 
-
-    Choose a location below!<br>
-    <a class="waves-effect waves-light btn">New Orleans</a><br>
-    <a class="waves-effect waves-light btn">Atlanta</a><br>
-    <a class="waves-effect waves-light btn">Charlotte</a><br>
-    <a class="waves-effect waves-light btn">Washington D.C.</a><br>
-    <a class="waves-effect waves-light btn">Philadelphia</a><br>
-    <a class="waves-effect waves-light btn">New York <City></City></a><br>
-
+    <div style="text-align:center">
+        <ul>
+            <li>
+                Choose a location below!
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn">New Orleans</a>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn">Atlanta</a><br>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn">Charlotte</a><br>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn">Washington D.C.</a><br>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn">Philadelphia</a><br>
+            </li>
+            <li>
+                <a class="waves-effect waves-light btn">New York <City></City></a><br>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
