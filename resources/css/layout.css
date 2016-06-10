@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-stretch: expanded;
 }
 .fit { /* set relative picture size */
     max-width: 100%;
