@@ -1,26 +1,34 @@
 {
-  "City Names": [
-    "New Orleans",
-    "Atlanta",
-    "Charlotte",
-    "Washington D.C.",
-    "Philadelphia",
-    "New York City"
-  ],
-  "Abbreviated City Names": [
-    "NOLA",
-    "Atlanta",
-    "CL",
-    "D.C.",
-    "Philly",
-    "NYC"
-  ],
-  "City URLS": [
-    "neworleans.html",
-    "atlanta.html",
-    "charlotte.html",
-    "dc.html",
-    "philly.html",
-    "nyc.html"
+  "Cities": [
+    {
+      "Name" : "New Orleans",
+      "AbbreviatedName" : "NOLA",
+      "URL" : "neworleans.html"
+    },
+    {
+      "Name": "Atlanta",
+      "AbbreviatedName": "Atlanta",
+      "URL": "atlanta.html"
+    },
+    {
+      "Name": "Charlotte",
+      "AbbreviatedName": "CL",
+      "URL": "charlotte.html"
+    },
+    {
+      "Name": "Washington D.C.",
+      "AbbreviatedName": "D.C.",
+      "URL": "dc.html"
+    },
+    {
+      "Name": "Philadelphia",
+      "AbbreviatedName": "Philly",
+      "URL": "philly.html"
+    },
+    {
+      "Name": "New York City",
+      "AbbreviatedName": "NYC",
+      "URL": "nyc.html"
+    }
   ]
 }
