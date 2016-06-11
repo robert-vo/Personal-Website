@@ -1,0 +1,26 @@
+{
+  "City Names": [
+    "New Orleans",
+    "Atlanta",
+    "Charlotte",
+    "Washington D.C.",
+    "Philadelphia",
+    "New York City"
+  ],
+  "Abbreviated City Names": [
+    "NOLA",
+    "Atlanta",
+    "CL",
+    "D.C.",
+    "Philly",
+    "NYC"
+  ],
+  "City URLS": [
+    "neworleans.html",
+    "atlanta.html",
+    "charlotte.html",
+    "dc.html",
+    "philly.html",
+    "nyc.html"
+  ]
+}

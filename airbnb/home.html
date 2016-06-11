@@ -1,97 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="tripPlannerApp">
 <head>
     <meta charset="UTF-8">
     <title>Choose a Location</title>
     <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
     <link type="text/css" rel="stylesheet" href="../resources/css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type="text/css">
-        ul {
-            font-size: 5.9vw;
-            word-wrap:break-word;
-
-        }
-        a {
-            word-wrap: break-word;
-            font-size: 3.0vw;
-            line-height:1.5em;
-            display: block;
-        }
-        li {
-            font-size: 2vmin;
-            word-wrap:break-word;
-
-        }
-    </script>
 </head>
 
 <body>
     <script type="text/javascript" src="../resources/js/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="../resources/js/materialize.min.js"></script>
-
-    <div style="text-align:center" class="stretch">
-        <ul>
-            <li>
-                Choose a location below!
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">New Orleans</a><br>
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">Atlanta</a><br>
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">Charlotte</a><br>
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">Washington D.C.</a><br>
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">Philadelphia</a><br>
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">New York City</a><br>
-            </li>
-            <li>
-                <a class="waves-effect waves-light btn-large">This is super long please line break okay</a><br>
-            </li>
-        </ul>
-    </div>
+    <script type="text/javascript" src="../resources/js/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="phone-list.component.js"></script>
 
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div style="text-align:center">
                 <h1>
-                    <a class="waves-effect waves-light btn-large">NOLA</a><br>
+                    Choose a location below!
                 </h1>
             </div>
-            <div class="col-md-6">
-                <h1>
-                    <a class="waves-effect waves-light btn-large">Atlanta</a><br>
-                </h1>
-            </div>
-            <div class="col-md-6">
-                <h1>
-                    <a class="waves-effect waves-light btn-large">Charlotte</a><br>
-                </h1>
-            </div>
-            <div class="col-md-6">
-                <h1>
-                    <a class="waves-effect waves-light btn-large">D.C.</a><br>
-                </h1>
-            </div>
-            <div class="col-md-6">
-                <h1>
-                    <a class="waves-effect waves-light btn-large">Philly</a><br>
-                </h1>
-            </div>
-            <div class="col-md-6">
-                <h1>
-                    <a class="waves-effect waves-light btn-large">NYC</a><br>
-                </h1>
-            </div>
+            <city-list></city-list>
         </div>
     </div>
 </body>
