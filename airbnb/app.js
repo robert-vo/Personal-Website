@@ -15,6 +15,40 @@ app.controller('newOrleansController', function($scope, $http) {
         });
 });
 
+app.controller('atlantaController', function($scope, $http) {
+    $http.get('../resources/json/atlanta.json')
+        .then(function(result){
+            $scope.atlanta = result.data;
+        });
+});
+
+app.controller('charlotteController', function($scope, $http) {
+    $http.get('../resources/json/charlotte.json')
+        .then(function(result){
+            $scope.charlotte = result.data;
+        });
+});
+
+app.controller('washingtonDcController', function($scope, $http) {
+    $http.get('../resources/json/dc.json')
+        .then(function(result){
+            $scope.dc = result.data;
+        });
+});
+
+app.controller('philadelphiaController', function($scope, $http) {
+    $http.get('../resources/json/philly.json')
+        .then(function(result){
+            $scope.phily = result.data;
+        });
+});
+
+app.controller('newYorkCityController', function($scope, $http) {
+    $http.get('../resources/json/nyc.json')
+        .then(function(result){
+            $scope.nyc = result.data;
+        });
+});
 
 app.directive('resize', function ($window) {
     return function (scope, element) {
