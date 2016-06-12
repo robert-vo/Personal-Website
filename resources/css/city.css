@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('../fonts/CircularStd-Bold.otf') format('truetype');
+}
+body {
+    font-family: 'CircularStd-Bold', serif;
+    font-size: 24px;
+    background-color: #E1EAED;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
