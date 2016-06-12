@@ -4,8 +4,7 @@ App.controller('tripPlannerController', function($scope, $http) {
     $http.get('../resources/json/cities.json')
         .then(function(result){
             $scope.cities = result.data;
-        });
-    
+        }); 
 });
 
 App.directive('resize', function ($window) {
@@ -20,26 +19,10 @@ App.directive('resize', function ($window) {
         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
             scope.windowHeight = newValue.h;
             scope.windowWidth = newValue.w;
-
-            scope.style = function () {
-                if((newValue.w - 100) < 700) {
-                    return {
-                        'height': 'small af',
-                        'width': (newValue.w - 100) + 'px'
-                    };
-                }
-                else {
-                    return {
-                        'height': (newValue.h - 12200) + 'px',
-                        'width': (newValue.w - 100) + 'px'
-                    };
-                }
-            };
-
         }, true);
 
         w.bind('resize', function () {
             scope.$apply();
         });
     }
-})
+});

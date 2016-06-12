@@ -23,16 +23,13 @@
             </div>
             <div ng-repeat="city in cities">
                 <h1>
-                    <a class = "waves-effect waves-light btn-large" href="{{city.URL}}"> <!-- if the width is less than 698 pixels, use abbreviation-->
-                        {{city.Name}}
+                    <a class = "waves-effect waves-light btn-large" href="{{city.link}}" resize>
+                        {{windowWidth > 698 ? city.Name : city.AbbreviatedName}}
                     </a>
                 </h1>
             </div>
         </div>
     </div>
-    <div ng-controller="tripPlannerController" ng-style="style()" resize>window.height: {{windowHeight}}
-        <br />window.width: {{windowWidth}}
-        <br />
-    </div>
+
 </body>
 </html>

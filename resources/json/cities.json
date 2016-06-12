@@ -2,31 +2,31 @@
     {
       "Name" : "New Orleans",
       "AbbreviatedName" : "NOLA",
-      "URL" : "neworleans.html"
+      "link" : "neworleans.html"
     },
     {
       "Name": "Atlanta",
       "AbbreviatedName": "Atlanta",
-      "URL": "atlanta.html"
+      "link": "atlanta.html"
     },
     {
       "Name": "Charlotte",
       "AbbreviatedName": "CL",
-      "URL": "charlotte.html"
+      "link": "charlotte.html"
     },
     {
       "Name": "Washington D.C.",
       "AbbreviatedName": "D.C.",
-      "URL": "dc.html"
+      "link": "dc.html"
     },
     {
       "Name": "Philadelphia",
       "AbbreviatedName": "Philly",
-      "URL": "philly.html"
+      "link": "philly.html"
     },
     {
       "Name": "New York City",
       "AbbreviatedName": "NYC",
-      "URL": "nyc.html"
+      "link": "nyc.html"
     }
 ]
