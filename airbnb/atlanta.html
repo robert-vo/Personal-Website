@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="tripPlannerApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Atlanta</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
+    <link rel="stylesheet" href="../resources/libraries/material-scrolltop-0.6.4/src/material-scrolltop.css">
+</head>
+
+<body>
+<script src="../resources/js/jquery-3.0.0.min.js"></script>
+<script src="../resources/js/angular.min.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" language="JavaScript">
+    function set_body_height() { // set body height = window height
+        $('body').height($(window).height());
+    }
+    $(document).ready(function() {
+        $(window).bind('resize', set_body_height);
+        set_body_height();
+    });
+</script>
+
+<div ng-include="'navigationBar.html'"></div>
+
+<scroll-up-button/>
+
+</body>
+</html>
