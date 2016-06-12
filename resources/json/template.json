@@ -21,11 +21,16 @@
     2,
     3
   ],
-  "Description" : "test",
   "House Rules" : "yes",
   "Total Cost of the place": 888,
   "Directions": "turn left",
   "House Manual": "left right left",
   "Wifi Network": "fbi van",
-  "Wifi Password": "hunter2"
+  "Wifi Password": "hunter2",
+  "The Space": "hi",
+  "Guest Access": "hi",
+  "Interaction with Guests": "sup",
+  "The Neighborhood": "hi",
+  "Getting Around": "hi",
+  "Other Things to Note": "nola"
 }
