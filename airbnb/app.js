@@ -1,13 +1,13 @@
-var App = angular.module('tripPlannerApp', []);
+var app = angular.module('tripPlannerApp', []);
 
-App.controller('tripPlannerController', function($scope, $http) {
+app.controller('tripPlannerController', function($scope, $http) {
     $http.get('../resources/json/cities.json')
         .then(function(result){
             $scope.cities = result.data;
         }); 
 });
 
-App.directive('resize', function ($window) {
+app.directive('resize', function ($window) {
     return function (scope, element) {
         var w = angular.element($window);
         scope.getWindowDimensions = function () {
@@ -24,5 +24,12 @@ App.directive('resize', function ($window) {
         w.bind('resize', function () {
             scope.$apply();
         });
+    }
+});
+
+app.directive('scrollUpButton', function() {
+    return {
+        restrict: 'AE',
+        templateUrl: 'scrollUpButton.html'
     }
 });
