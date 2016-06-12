@@ -1,5 +1,4 @@
-{
-  "Cities": [
+[
     {
       "Name" : "New Orleans",
       "AbbreviatedName" : "NOLA",
@@ -30,5 +29,4 @@
       "AbbreviatedName": "NYC",
       "URL": "nyc.html"
     }
-  ]
-}
+]
