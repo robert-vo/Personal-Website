@@ -21,3 +21,6 @@ body {
     background-image: url("../img/background.png");
 }
 
+.img-circle {
+    border-radius: 50%;
+}

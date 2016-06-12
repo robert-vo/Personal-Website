@@ -5,6 +5,11 @@
     <title>New Orleans</title>
     <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
     <link rel="stylesheet" href="../resources/libraries/material-scrolltop-0.6.4/src/material-scrolltop.css">
+    <script type="text/css">
+        body {
+            font-size: 20px !important;
+        }
+    </script>
 </head>
 
 <body>
@@ -22,6 +27,70 @@
     </script>
 
     <div ng-include="'navigationBar.html'"></div>
+
+    <div ng-controller="newOrleansController">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{neworleans['Host Image']}}">
+                        <span class="card-title">Your Host, {{neworleans['Host Name']}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        You are going to {{neworleans['Name']}}!<br>
+        Reservation code: {{neworleans['Reservation Code']}}.<br>
+        Your Host, {{neworleans['Host Name']}} <img class="img-circle" src="{{neworleans['Host Image']}}"><br>
+        {{neworleans['Host Name']}} can be contacted at {{neworleans['Host Phone Number']}}<br>
+        <!--{{neworleans['Host Name']}} can be contacted at <a href="tel:{{neworleans['Host Phone Number']}}">{{neworleans['Host Phone Number']}}</a><br>-->
+        Check In Details: {{neworleans['Check-in']}}<br>
+        Check Out Details: {{neworleans['Check-out']}}<br>
+        Megabus Address: {{neworleans['Megabus Stop']}}<br>
+        Airbnb Address: {{neworleans['Airbnb Address']}}<br>
+        <a href="https://www.google.com/maps/place/hofheinz+pavilion">
+            <img src="http://maps.googleapis.com/maps/api/staticmap?center=29.723815,+-95.349986&zoom=16&scale=false&size=600x600&maptype=roadmap&key=AIzaSyCp0D44hmeRrg8lKHyj74jVjo8gNTvPhwI&format=png&visual_refresh=true&markers=icon:http://emojipedia-us.s3.amazonaws.com/cache/e9/cb/e9cb09137ca15cb6c298931b92d3db22.png%7Cshadow:false%7C29.723815,+-95.349986">
+        </a>
+        About this Listing: {{neworleans['About Listing']}}<br>
+        Number of Bathrooms: {{neworleans['Number of Bathrooms']}}<br>
+        Number of Bedrooms: {{neworleans['Number of Bedrooms']}}<br>
+        Number of Beds: {{neworleans['Number of Beds']}}<br>
+        <br>
+        The sleeping arrangement is given below.
+        <div ng-repeat="arrangement in neworleans['Sleeping Arrangement']">
+            {{arrangement}}
+        </div>
+        <br>
+        Room type: {{neworleans['Room Type']}}<br>
+
+        <br>
+        Amenities include:
+        <div ng-repeat="amenity in neworleans['Amenities']">
+            {{amenity}}
+        </div>
+        <br>
+
+        Wifi Network: {{neworleans['Wifi Network']}}<br>
+        Wifi Password: {{neworleans['Wifi Password']}}<br>
+
+        House Rules: {{neworleans['House Rules']}}<br>
+        Total Cost of the Airbnb: ${{neworleans['Total Cost of the place']}}<br>
+        Directions: {{neworleans['Directions']}}<br>
+        House Manual: {{neworleans['House Manual']}}<br>
+        The Space: {{neworleans['The Space']}}<br>
+        Guest Access: {{neworleans['Guest Access']}}<br>
+        Interaction with Guests: {{neworleans['Interaction with Guests']}}<br>
+        The Neighborhood: {{neworleans['The Neighborhood']}}<br>
+        Getting Around: {{neworleans['Getting Around']}}<br>
+        Other Things to Note: {{neworleans['Other Things to Note']}}<br>
+    </div>
 
     <scroll-up-button/>
 

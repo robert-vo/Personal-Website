@@ -4,8 +4,17 @@ app.controller('tripPlannerController', function($scope, $http) {
     $http.get('../resources/json/cities.json')
         .then(function(result){
             $scope.cities = result.data;
-        }); 
+        });
+    
 });
+
+app.controller('newOrleansController', function($scope, $http) {
+    $http.get('../resources/json/neworleans.json')
+        .then(function(result){
+            $scope.neworleans = result.data;
+        });
+});
+
 
 app.directive('resize', function ($window) {
     return function (scope, element) {

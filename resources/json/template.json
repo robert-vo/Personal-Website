@@ -1,0 +1,31 @@
+{
+  "Host Image" : "thisURL",
+  "Host Name" : "hostName",
+  "Host Phone Number" : "hostPhone",
+  "Reservation Code": "123123",
+  "Check-in": "check-in",
+  "Check-out": "check-out",
+  "Megabus Stop": "123 megabus way",
+  "Airbnb Address": "123 main street",
+  "About Listing": "dsf",
+  "Number of Bathrooms": 3,
+  "Number of Bedrooms": 2,
+  "Number of Beds": 2,
+  "Sleeping Arrangement": [
+    "Bedroom 1 - 1 queen bed",
+    "Common Spaces - 1 sofa bed"
+  ],
+  "Room Type": "Entire Apartment",
+  "Amenities" : [
+    1,
+    2,
+    3
+  ],
+  "Description" : "test",
+  "House Rules" : "yes",
+  "Total Cost of the place": 888,
+  "Directions": "turn left",
+  "House Manual": "left right left",
+  "Wifi Network": "fbi van",
+  "Wifi Password": "hunter2"
+}
