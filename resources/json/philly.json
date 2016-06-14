@@ -1,0 +1,22 @@
+{
+  "City Name": "Philadelphia",
+  "Hotel Name" : "Sleep Inn Philadelphia",
+  "Hotel Phone Number" : "(267) 417-8288",
+  "Hotel Confirmation": "26723840",
+  "Hotel Itinerary": "6672615191",
+  "Check-in": "Thu, Jun 23",
+  "Check-out": "Sat, Jun 25",
+  "Megabus Stop": "30th St Station, Philadelphia, PA",
+  "Hotel Address": "1020 Cherry Street Philadelphia, PA 19107",
+  "Sleeping Arrangement": [
+    "2 Queen Beds"
+  ],
+  "Room Type": "Entire home/apt",
+  "Amenities" : [
+    "Fitness Center",
+    "Business Center",
+    "Resturant(s)",
+    "Internet Access"
+  ],
+  "Total Cost of the place": 177.40
+}
