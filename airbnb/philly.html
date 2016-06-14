@@ -3,27 +3,66 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Philadelphia</title>
-    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/city.css">
     <link rel="stylesheet" href="../resources/libraries/material-scrolltop-0.6.4/src/material-scrolltop.css">
 </head>
 
 <body>
-<script src="../resources/js/jquery-3.0.0.min.js"></script>
-<script src="../resources/js/angular.min.js"></script>
-<script src="app.js"></script>
-<script type="text/javascript" language="JavaScript">
-    function set_body_height() { // set body height = window height
-        $('body').height($(window).height());
-    }
-    $(document).ready(function() {
-        $(window).bind('resize', set_body_height);
-        set_body_height();
-    });
-</script>
+    <script src="../resources/js/jquery-3.0.0.min.js"></script>
+    <script src="../resources/js/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        function set_body_height() { // set body height = window height
+            $('body').height($(window).height());
+        }
+        $(document).ready(function() {
+            $(window).bind('resize', set_body_height);
+            set_body_height();
+        });
+    </script>
 
-<div ng-include="'navigationBar.html'"></div>
+    <div ng-include="'navigationBar.html'"></div>
 
-<scroll-up-button/>
+    <a href="https://www.google.com/maps/place/1020+Cherry+St,+Philadelphia,+PA+19107/@39.9544171,-75.1592908,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6c62a3424681b:0xa2b2823f801be22d!8m2!3d39.9544171!4d-75.1571021">
+        <img width="600" src="http://maps.googleapis.com/maps/api/staticmap?center=1020+Cherry+Street+Philadelphia,+PA+19107&zoom=13&scale=false&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=icon:http://icons.iconarchive.com/icons/matthew-kelleigh/mac-town-vol2/32/School-Bus-1-icon.png%7Cshadow:true%7C30th+St+Station,+Philadelphia,+PA&markers=icon:http://icons.iconarchive.com/icons/pixture/board-game/32/Hotel-icon.png%7Cshadow:true%7C1020+Cherry+Street+Philadelphia,+PA+19107" alt="Google Map of 1020 Cherry Street Philadelphia, PA 19107">
+    </a>
+
+    <div ng-controller="philadelphiaController">
+        You are going to {{philly['City Name']}}!<br>
+        Your hotel name is, {{philly['Hotel Name']}}<br>
+        {{philly['Hotel Name']}} can be contacted at {{philly['Hotel Phone Number']}}<br>
+        Hotel Confirmation: {{philly['Hotel Confirmation']}}<br>
+        Hotel Itinerary: {{philly['Hotel Itinerary']}}<br>
+        <!--{{philly['Host Name']}} can be contacted at <a href="tel:{{philly['Host Phone Number']}}">{{philly['Host Phone Number']}}</a><br>-->
+        Check In Details: {{philly['Check-in']}}<br>
+        Check Out Details: {{philly['Check-out']}}<br>
+        Megabus Address: {{philly['Megabus Stop']}}<br>
+        <a href="https://www.google.com/maps/place/30th St Station, Philadelphia, PA">
+            <img width="600" src="http://maps.googleapis.com/maps/api/staticmap?center=30th+St+Station,+Philadelphia,+PA&zoom=15&scale=false&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=icon:http://icons.iconarchive.com/icons/matthew-kelleigh/mac-town-vol2/32/School-Bus-1-icon.png%7Cshadow:true%7C30th+St+Station,+Philadelphia,+PA" alt="Google Map of 30th St Station, Philadelphia, PA">
+        </a>
+        Hotel Address: {{philly['Hotel Address']}}<br>
+        <a href="https://www.google.com/maps/place/1020 Cherry Street Philadelphia, PA 19107">
+            <img width="600" src="http://maps.googleapis.com/maps/api/staticmap?center=1020+Cherry+Street+Philadelphia,+PA+19107&zoom=15&scale=false&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=icon:http://icons.iconarchive.com/icons/pixture/board-game/32/Hotel-icon.png%7Cshadow:true%7C1020+Cherry+Street+Philadelphia,+PA+19107" alt="Google Map of 1020 Cherry Street Philadelphia, PA 19107">
+        </a>
+        <br>
+        The sleeping arrangement is given below.
+        <div ng-repeat="arrangement in philly['Sleeping Arrangement']">
+            {{arrangement}}
+        </div>
+        <br>
+
+        <br>
+        Amenities include:
+        <div ng-repeat="amenity in philly['Amenities']">
+            {{amenity}}
+        </div>
+        <br>
+        Total Cost of the Hotel: ${{philly['Total Cost of the place']}}<br>
+    </div>
+
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJRdtHvE7GxokRAey13D9X_AQ&destination=place_id:ChIJG2gkNCrGxokRLeIbgD-CsqI&key=AIzaSyCVhkUITt_95BifrvYP8sV4xQVtSymUvSk" allowfullscreen></iframe>
+
+    <scroll-up-button/>
 
 </body>
 </html>
