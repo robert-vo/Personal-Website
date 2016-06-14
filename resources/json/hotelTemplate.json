@@ -1,0 +1,36 @@
+{
+  "City Name": "city",
+  "Hotel Name" : "thisURL",
+  "Host Phone Number" : "hostPhone",
+  "Reservation Code": "123123",
+  "Check-in": "check-in",
+  "Check-out": "check-out",
+  "Megabus Stop": "123 megabus way",
+  "Hotel Address": "123 main street",
+  "About Hotel": "dsf",
+  "Number of Bathrooms": 3,
+  "Number of Bedrooms": 2,
+  "Number of Beds": 2,
+  "Sleeping Arrangement": [
+    "Bedroom 1 - 1 queen bed",
+    "Common Spaces - 1 sofa bed"
+  ],
+  "Room Type": "Entire Apartment",
+  "Amenities" : [
+    1,
+    2,
+    3
+  ],
+  "House Rules" : "yes",
+  "Total Cost of the place": 888,
+  "Directions": "turn left",
+  "House Manual": "left right left",
+  "Wifi Network": "fbi van",
+  "Wifi Password": "hunter2",
+  "The Space": "hi",
+  "Guest Access": "hi",
+  "Interaction with Guests": "sup",
+  "The Neighborhood": "hi",
+  "Getting Around": "hi",
+  "Other Things to Note": "nola"
+}
