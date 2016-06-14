@@ -39,7 +39,7 @@ app.controller('washingtonDcController', function($scope, $http) {
 app.controller('philadelphiaController', function($scope, $http) {
     $http.get('../resources/json/philly.json')
         .then(function(result){
-            $scope.phily = result.data;
+            $scope.philly = result.data;
         });
 });
 
