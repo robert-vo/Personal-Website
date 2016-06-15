@@ -34,7 +34,8 @@
   "The Neighborhood": "hi",
   "Getting Around": "hi",
   "Other Things to Note": "nola",
-  "Megabus Reservation Number": "123",
-  "Megabus Arrival Time": "",
-  "Megabus Departure Time": ""
+  "Megabus Reservation Number To This City": "2/6-3680-062016-M37R-1800-ATL-CHR",
+  "Megabus Reservation Number Leaving This City": "1/5-1843-062116-M37R-2330-CHR-WAS",
+  "Megabus Arrival Time": "June 20th, 11:30PM",
+  "Megabus Departure Time": "June 21st, 11:30PM"
 }
