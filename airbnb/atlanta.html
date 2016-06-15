@@ -15,7 +15,7 @@
     function set_body_height() { // set body height = window height
         $('body').height($(window).height());
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
         $(window).bind('resize', set_body_height);
         set_body_height();
     });
@@ -26,10 +26,10 @@
 <div ng-controller="atlantaController">
     <div class="row">
         <div class="col s12 m6 l3">
-            <p>You are going to {{atlanta['Name']}}!<br>
+            <p>You are going to <span class="bold">{{atlanta['Name']}}!</span><br>
             </p>
         </div>
-        <div class="col s12 m6 l3"><p>Reservation code: {{atlanta['Reservation Code']}}.<br>
+        <div class="col s12 m6 l3"><p><span class="bold">Reservation code: </span>{{atlanta['Reservation Code']}}.<br>
         </p></div>
         <div class="col s12 m6 l3">
             <p>
@@ -62,43 +62,47 @@
                 </div>
             </div>
         </div>
-        <div class = "col s4">
-            sup
+        <div class="col s6">
+            <span class="bold">Megabus Address: </span>{{atlanta['Megabus Stop']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{atlanta['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
         </div>
-        <div class = "col s4">
-            sup
+        <div class="col s6">
+            <span class="bold">Airbnb Address: </span>{{atlanta['Airbnb Address']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{atlanta['Airbnb Address']}}">Open Airbnb Address in Google Maps</a>
+
         </div>
     </div>
 
     <!--{{atlanta['Host Name']}} can be contacted at <a href="tel:{{atlanta['Host Phone Number']}}">{{atlanta['Host Phone Number']}}</a><br>-->
-    Megabus Address: {{atlanta['Megabus Stop']}}<br>
-    Airbnb Address: {{atlanta['Airbnb Address']}}<br>
-    About this Listing: {{atlanta['About Listing']}}<br>
-    Number of Bathrooms: {{atlanta['Number of Bathrooms']}}<br>
-    Number of Bedrooms: {{atlanta['Number of Bedrooms']}}<br>
-    Number of Beds: {{atlanta['Number of Beds']}}<br>
+    <span class="bold">About this Listing: </span>{{atlanta['About Listing']}}<br><br>
+    <span class="bold">Number of Bathrooms: </span>{{atlanta['Number of Bathrooms']}}<br>
+    <span class="bold">Number of Bedrooms: </span>{{atlanta['Number of Bedrooms']}}<br>
+    <span class="bold">Number of Beds: </span>{{atlanta['Number of Beds']}}<br>
     <br>
     The sleeping arrangement is given below.
     <div ng-repeat="arrangement in atlanta['Sleeping Arrangement']">
         {{arrangement}}
     </div>
     <br>
-    Room type: {{atlanta['Room Type']}}<br>
+    <span class="bold">Room type: </span>{{atlanta['Room Type']}}<br>
 
     <br>
-    Amenities include:
-    <div ng-repeat="amenity in atlanta['Amenities']">
-        {{amenity}}
-    </div>
+
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>Amenities</h4></li>
+        <div ng-repeat="amenity in atlanta['Amenities']">
+            <li class="collection-item">{{amenity}}</li>
+        </div>
+    </ul>
     <br>
 
-    Wifi Network: {{atlanta['Wifi Network']}}<br>
-    Wifi Password: {{atlanta['Wifi Password']}}<br>
+    <span class="bold">Wifi Network: </span>{{atlanta['Wifi Network']}}<br>
+    <span class="bold">Wifi Password: </span>{{atlanta['Wifi Password']}}<br>
 
-    House Rules: {{atlanta['House Rules']}}<br>
-    Total Cost of the Airbnb: ${{atlanta['Total Cost of the place']}}<br>
-    The Neighborhood: <div style="white-space: pre-line; word-wrap: break-word">{{atlanta['The Neighborhood']}}<br></div>
-    Getting Around: <span style="white-space: pre;">{{atlanta['Getting Around']}}
+    <span class="bold">House Rules: </span>{{atlanta['House Rules']}}<br>
+    <span class="bold">Total Cost of the Airbnb: </span>${{atlanta['Total Cost of the place']}}<br>
+    <span class="bold">The Neighborhood: </span> <span style="white-space: pre-line; word-wrap: break-word">{{atlanta['The Neighborhood']}}<br></span>
+    <br><span class="bold">Getting Around: </span><span style="white-space: pre;">{{atlanta['Getting Around']}}
     </span>
 
 

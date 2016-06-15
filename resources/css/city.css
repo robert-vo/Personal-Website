@@ -21,3 +21,7 @@ body {
 .img-circle {
     border-radius: 50%;
 }
+
+.smallAnchorTag {
+    font-size: 24px;
+}
