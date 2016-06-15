@@ -50,6 +50,13 @@ app.controller('newYorkCityController', function($scope, $http) {
         });
 });
 
+app.controller('cruiseController', function($scope, $http) {
+    $http.get('../resources/json/cruise.json')
+        .then(function(result){
+            $scope.cruise = result.data;
+        });
+});
+
 app.directive('resize', function ($window) {
     return function (scope, element) {
         var w = angular.element($window);
