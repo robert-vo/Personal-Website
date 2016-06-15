@@ -26,7 +26,7 @@
 <div ng-controller="atlantaController">
     <div class="row">
         <div class="col s12 m6 l3">
-            <p>You are going to <span class="bold">{{atlanta['Name']}}!</span><br>
+            <p>You are going to <span class="bold">{{atlanta['City Name']}}!</span><br>
             </p>
         </div>
         <div class="col s12 m6 l3"><p><span class="bold">Reservation code: </span>{{atlanta['Reservation Code']}}.<br>
@@ -102,7 +102,7 @@
     <span class="bold">House Rules: </span>{{atlanta['House Rules']}}<br>
     <span class="bold">Total Cost of the Airbnb: </span>${{atlanta['Total Cost of the place']}}<br>
     <span class="bold">The Neighborhood: </span> <span style="white-space: pre-line; word-wrap: break-word">{{atlanta['The Neighborhood']}}<br></span>
-    <br><span class="bold" >Getting Around: <br></span><span style="white-space: pre;">{{atlanta['Getting Around']}}
+    <br><span class="bold" >Getting Around: <br></span><span style="white-space: pre; word-wrap: break-word">{{atlanta['Getting Around']}}
     </span>
 
 
