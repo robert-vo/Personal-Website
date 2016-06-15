@@ -32,5 +32,8 @@
   "Interaction with Guests": "sup",
   "The Neighborhood": "hi",
   "Getting Around": "hi",
-  "Other Things to Note": "nola"
+  "Other Things to Note": "nola",
+  "Megabus Reservation Number": "123",
+  "Megabus Arrival Time": "",
+  "Megabus Departure Time": ""
 }

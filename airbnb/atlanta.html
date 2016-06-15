@@ -25,30 +25,71 @@
 
 <div ng-controller="atlantaController">
     <div class="row">
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l6">
             <p>You are going to <span class="bold">{{atlanta['City Name']}}!</span><br>
             </p>
         </div>
-        <div class="col s12 m6 l3"><p><span class="bold">Reservation code: </span>{{atlanta['Reservation Code']}}.<br>
+        <div class="col s12 m6 l6"><p><span class="bold">Airbnb Reservation code: </span>{{atlanta['Reservation Code']}}.<br>
         </p></div>
-        <div class="col s12 m6 l3">
+
+    </div>
+
+    <div class="row">
+
+        <div class="col s3">
             <p>
                     <span class="bold">
-                        Check In Details:
+                        Megabus Arrival Time:
+                    </span>
+                {{atlanta['Megabus Arrival Time']}}
+            </p>
+        </div>
+        <div class="col s3">
+            <p>
+                    <span class="bold">
+                        Airbnb Check In Details:
                     </span>
                 {{atlanta['Check-in']}}
             </p>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s3">
             <p>
                     <span class="bold">
-                        Check Out Details:
+                        Airbnb Check Out Details:
                     </span>
                 {{atlanta['Check-out']}}
             </p>
         </div>
+        <div class="col s3">
+            <p>
+                    <span class="bold">
+                        Megabus Departure Time:
+                    </span>
+                {{atlanta['Megabus Departure Time']}}
+            </p>
+        </div>
     </div>
 
+    <div class="row">
+    <div class="col s12 m6 l6">
+        <span class="bold">Megabus Address: </span>{{atlanta['Megabus Stop']}}<br>
+        <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{atlanta['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
+    </div>
+    <div class="col s12 m6 l6">
+        <span class="bold">Airbnb Address: </span>{{atlanta['Airbnb Address']}}<br>
+        <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{atlanta['Airbnb Address']}}">Open Airbnb Address in Google Maps</a>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col s12 m6 l12">
+        <span class="bold">Megabus Reservation Number: </span>{{atlanta['Megabus Reservation Number']}}<br>
+    </div>
+    </div>
+
+
+    <!--{{atlanta['Host Name']}} can be contacted at <a href="tel:{{atlanta['Host Phone Number']}}">{{atlanta['Host Phone Number']}}</a><br>-->
+
+    <br>
     <div class="row">
         <div class="col s12 m6 l4">
             <div class="card">
@@ -57,33 +98,26 @@
                     <span class="card-title"><h5>Your Host, {{atlanta['Host Name']}}</h5></span>
                 </div>
                 <div class="card-content">
-                    <p>{{atlanta['Host Name']}} can be contacted at {{atlanta['Host Phone Number']}}.<br>
-                    </p>
+                    <p>{{atlanta['Host Name']}} can be contacted at {{atlanta['Host Phone Number']}}.<br></p>
                 </div>
             </div>
         </div>
-        <div class="col s6">
-            <span class="bold">Megabus Address: </span>{{atlanta['Megabus Stop']}}<br>
-            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{atlanta['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
-        </div>
-        <div class="col s6">
-            <span class="bold">Airbnb Address: </span>{{atlanta['Airbnb Address']}}<br>
-            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{atlanta['Airbnb Address']}}">Open Airbnb Address in Google Maps</a>
 
+        <div class="col s12 m6 l8">
+            <span class="bold">About this Listing: </span>{{atlanta['About Listing']}}<br><br>
+
+            <span class="bold">Number of Bathrooms: </span>{{atlanta['Number of Bathrooms']}}<br>
+            <span class="bold">Number of Bedrooms: </span>{{atlanta['Number of Bedrooms']}}<br>
+            <span class="bold">Number of Beds: </span>{{atlanta['Number of Beds']}}<br><br>
+            The sleeping arrangement is given below.
+            <div ng-repeat="arrangement in atlanta['Sleeping Arrangement']">
+                {{arrangement}}
+            </div>
         </div>
     </div>
 
-    <!--{{atlanta['Host Name']}} can be contacted at <a href="tel:{{atlanta['Host Phone Number']}}">{{atlanta['Host Phone Number']}}</a><br>-->
-    <span class="bold">About this Listing: </span>{{atlanta['About Listing']}}<br><br>
-    <span class="bold">Number of Bathrooms: </span>{{atlanta['Number of Bathrooms']}}<br>
-    <span class="bold">Number of Bedrooms: </span>{{atlanta['Number of Bedrooms']}}<br>
-    <span class="bold">Number of Beds: </span>{{atlanta['Number of Beds']}}<br>
-    <br>
-    The sleeping arrangement is given below.
-    <div ng-repeat="arrangement in atlanta['Sleeping Arrangement']">
-        {{arrangement}}
-    </div>
-    <br>
+    <div class="row">
+        <div class="col s12 m12 l12">
     <span class="bold">Room type: </span>{{atlanta['Room Type']}}<br>
 
     <br>
@@ -102,8 +136,8 @@
     <span class="bold">The Neighborhood: </span> <span style="white-space: pre-line; word-wrap: break-word">{{atlanta['The Neighborhood']}}<br></span>
     <br><span class="bold" >Getting Around: <br></span><span style="white-space: pre; word-wrap: break-word">{{atlanta['Getting Around']}}
     </span>
-
-
+        </div>
+    </div>
 </div>
 
 <scroll-up-button/>
