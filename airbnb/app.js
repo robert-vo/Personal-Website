@@ -11,7 +11,7 @@ app.controller('tripPlannerController', function($scope, $http) {
 app.controller('newOrleansController', function($scope, $http) {
     $http.get('../resources/json/neworleans.json')
         .then(function(result){
-            $scope.neworleans = result.data;
+            $scope.newOrleans = result.data;
         });
 });
 

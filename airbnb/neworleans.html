@@ -8,110 +8,112 @@
 </head>
 
 <body>
-    <script src="../resources/js/jquery-3.0.0.min.js"></script>
-    <script src="../resources/js/angular.min.js"></script>
-    <script src="app.js"></script>
-    <script type="text/javascript" language="JavaScript">
-        function set_body_height() { // set body height = window height
-            $('body').height($(window).height());
-        }
-        $(document).ready(function() {
-            $(window).bind('resize', set_body_height);
-            set_body_height();
-        });
-    </script>
-
-    <div ng-include="'navigationBar.html'"></div>
-
-    <div ng-controller="newOrleansController">
-        <div google-maps-generator data="{{neworleans['Name']}}"></div google-maps-generator>
-        <div class="row">
-            <div class="col s12 m6 l3">
-                <p>You are going to {{neworleans['Name']}}!<br>
-                </p>
-            </div>
-            <div class="col s12 m6 l3"><p>Reservation code: {{neworleans['Reservation Code']}}.<br>
-            </p></div>
-            <div class="col s12 m6 l3">
-                <p>
-                    <span class="bold">
-                        Check In Details:
-                    </span>
-                    {{neworleans['Check-in']}}
-                </p>
-            </div>
-            <div class="col s12 m6 l3">
-                <p>
-                    <span class="bold">
-                        Check Out Details:
-                    </span>
-                    {{neworleans['Check-out']}}
-                </p>
-            </div>
+<script src="../resources/js/jquery-3.0.0.min.js"></script>
+<script src="../resources/js/angular.min.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" language="JavaScript">
+    function set_body_height() { // set body height = window height
+        $('body').height($(window).height());
+    }
+    $(document).ready(function () {
+        $(window).bind('resize', set_body_height);
+        set_body_height();
+    });
+</script>
+<div ng-include="'navigationBar.html'"></div>
+<div ng-controller="newOrleansController">
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <p>You are going to <span class="bold">{{newOrleans['City Name']}}!</span><br>
+            </p>
         </div>
-
-        <div class="row">
-            <div class="col s4 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{neworleans['Host Image']}}">
-                        <span class="card-title"><h5>Your Host, {{neworleans['Host Name']}}</h5></span>
-                    </div>
-                    <div class="card-content">
-                        <p>{{neworleans['Host Name']}} can be contacted at {{neworleans['Host Phone Number']}}.<br>
-                        </p>
-                    </div>
+        <div class="col s12 m6 l6"><p><span class="bold">Hotel Reservation Number: </span>{{newOrleans['Reservation Number']}}.<br>
+        </p></div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Megabus Arrival Time:
+                    </span>
+                {{newOrleans['Megabus Arrival Time']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Hotel Check In Details:
+                    </span>
+                {{newOrleans['Check-in']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Megabus Departure Time:
+                    </span>
+                {{newOrleans['Megabus Departure Time']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Hotel Check Out Details:
+                    </span>
+                {{newOrleans['Check-out']}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Address: </span>{{newOrleans['Megabus Stop']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{newOrleans['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
+        </div>
+        <div class="col s12 m6 l6">
+            <span class="bold">Hotel Address: </span>{{newOrleans['Hotel Address']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{newOrleans['Hotel Address']}}">Open Hotel Address in Google Maps</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Reservation Number From HOU to NOLA: </span>{{newOrleans['Megabus Reservation Number To This City']}}<br><br>
+        </div>
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Reservation Number From NOLA to ATL: </span>{{newOrleans['Megabus Reservation Number Leaving This City']}}<br>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{newOrleans['Host Image']}}">
+                    <span class="card-title"><h5>Your Hotel, {{newOrleans['Hotel Name']}}</h5></span>
+                </div>
+                <div class="card-content">
+                    <p>{{newOrleans['Hotel Name']}} can be contacted at {{newOrleans['Host Phone Number']}}.<br></p>
                 </div>
             </div>
-            <div class = "col s4">
-                sup
-            </div>
-            <div class = "col s4">
-                sup
-            </div>
         </div>
-
-        <!--{{neworleans['Host Name']}} can be contacted at <a href="tel:{{neworleans['Host Phone Number']}}">{{neworleans['Host Phone Number']}}</a><br>-->
-        Megabus Address: {{neworleans['Megabus Stop']}}<br>
-        Airbnb Address: {{neworleans['Airbnb Address']}}<br>
-        <a href="https://www.google.com/maps/place/hofheinz+pavilion">
-            <img src="http://maps.googleapis.com/maps/api/staticmap?center=29.723815,+-95.349986&zoom=16&scale=false&size=600x600&maptype=roadmap&key=AIzaSyCp0D44hmeRrg8lKHyj74jVjo8gNTvPhwI&format=png&visual_refresh=true&markers=icon:http://emojipedia-us.s3.amazonaws.com/cache/e9/cb/e9cb09137ca15cb6c298931b92d3db22.png%7Cshadow:false%7C29.723815,+-95.349986">
-        </a>
-        About this Listing: {{neworleans['About Listing']}}<br>
-        Number of Bathrooms: {{neworleans['Number of Bathrooms']}}<br>
-        Number of Bedrooms: {{neworleans['Number of Bedrooms']}}<br>
-        Number of Beds: {{neworleans['Number of Beds']}}<br>
-        <br>
-        The sleeping arrangement is given below.
-        <div ng-repeat="arrangement in neworleans['Sleeping Arrangement']">
-            {{arrangement}}
+        <div class="col s12 m6 l6">
+            <span class="bold">Number of Rooms: </span>{{newOrleans['Number of Rooms']}}<br>
+            <span class="bold">Number of Beds: </span>{{newOrleans['Number of Beds']}}<br>
+            <span class="bold">Room Type: </span>{{newOrleans['Room Type']}}<br><br>
         </div>
-        <br>
-        Room type: {{neworleans['Room Type']}}<br>
-
-        <br>
-        Amenities include:
-        <div ng-repeat="amenity in neworleans['Amenities']">
-            {{amenity}}
-        </div>
-        <br>
-
-        Wifi Network: {{neworleans['Wifi Network']}}<br>
-        Wifi Password: {{neworleans['Wifi Password']}}<br>
-
-        House Rules: {{neworleans['House Rules']}}<br>
-        Total Cost of the Airbnb: ${{neworleans['Total Cost of the place']}}<br>
-        Directions: {{neworleans['Directions']}}<br>
-        House Manual: {{neworleans['House Manual']}}<br>
-        The Space: {{neworleans['The Space']}}<br>
-        Guest Access: {{neworleans['Guest Access']}}<br>
-        Interaction with Guests: {{neworleans['Interaction with Guests']}}<br>
-        The Neighborhood: {{neworleans['The Neighborhood']}}<br>
-        Getting Around: {{neworleans['Getting Around']}}<br>
-        Other Things to Note: {{neworleans['Other Things to Note']}}<br>
     </div>
-
-    <scroll-up-button/>
-
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>Amenities</h4></li>
+                <div ng-repeat="amenity in newOrleans['Amenities']">
+                    <li class="collection-item">{{amenity}}</li>
+                </div>
+            </ul>
+            <br>
+            <span class="bold">Total Cost of the Hotel: </span>${{newOrleans['Total Cost of the place']}}<br><br>
+        </div>
+    </div>
+</div>
+<scroll-up-button/>
 </body>
 </html>
