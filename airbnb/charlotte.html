@@ -25,30 +25,75 @@
 
 <div ng-controller="charlotteController">
     <div class="row">
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l6">
             <p>You are going to <span class="bold">{{charlotte['City Name']}}!</span><br>
             </p>
         </div>
-        <div class="col s12 m6 l3"><p><span class="bold">Reservation code: </span>{{charlotte['Reservation Code']}}.<br>
+        <div class="col s12 m6 l6"><p><span class="bold">Airbnb Reservation code: </span>{{charlotte['Reservation Code']}}.<br>
         </p></div>
-        <div class="col s12 m6 l3">
+
+    </div>
+
+    <div class="row">
+
+        <div class="col s6">
             <p>
                     <span class="bold">
-                        Check In Details:
+                        Megabus Arrival Time:
+                    </span>
+                {{charlotte['Megabus Arrival Time']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Airbnb Check In Details:
                     </span>
                 {{charlotte['Check-in']}}
             </p>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s6">
             <p>
                     <span class="bold">
-                        Check Out Details:
+                        Megabus Departure Time:
+                    </span>
+                {{charlotte['Megabus Departure Time']}}
+            </p>
+
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Airbnb Check Out Details:
                     </span>
                 {{charlotte['Check-out']}}
             </p>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Address: </span>{{charlotte['Megabus Stop']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{charlotte['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
+        </div>
+        <div class="col s12 m6 l6">
+            <span class="bold">Airbnb Address: </span>{{charlotte['Airbnb Address']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{charlotte['Airbnb Address']}}">Open Airbnb Address in Google Maps</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Reservation Number From NOL to ATL: </span>{{charlotte['Megabus Reservation Number To This City']}}<br><br>
+        </div>
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Reservation Number From ATL to CL: </span>{{charlotte['Megabus Reservation Number Leaving This City']}}<br>
+        </div>
+    </div>
+
+
+    <!--{{charlotte['Host Name']}} can be contacted at <a href="tel:{{charlotte['Host Phone Number']}}">{{charlotte['Host Phone Number']}}</a><br>-->
+
+    <br>
     <div class="row">
         <div class="col s12 m6 l4">
             <div class="card">
@@ -57,58 +102,46 @@
                     <span class="card-title"><h5>Your Host, {{charlotte['Host Name']}}</h5></span>
                 </div>
                 <div class="card-content">
-                    <p>{{charlotte['Host Name']}} can be contacted at {{charlotte['Host Phone Number']}}.<br>
-                    </p>
+                    <p>{{charlotte['Host Name']}} can be contacted at {{charlotte['Host Phone Number']}}.<br></p>
                 </div>
             </div>
         </div>
-        <div class="col s6">
-            <span class="bold">Megabus Address: </span>{{charlotte['Megabus Stop']}}<br>
-            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{charlotte['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
-        </div>
-        <div class="col s6">
-            <span class="bold">Airbnb Address: </span>{{charlotte['Airbnb Address']}}<br>
-            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{charlotte['Airbnb Address']}}">Open Airbnb Address in Google Maps</a>
 
+        <div class="col s12 m6 l8">
+            <span class="bold">About this Listing: </span>{{charlotte['About Listing']}}<br><br>
+
+            <span class="bold">Number of Bathrooms: </span>{{charlotte['Number of Bathrooms']}}<br>
+            <span class="bold">Number of Bedrooms: </span>{{charlotte['Number of Bedrooms']}}<br>
+            <span class="bold">Number of Beds: </span>{{charlotte['Number of Beds']}}<br><br>
+            The sleeping arrangement is given below.
+            <div ng-repeat="arrangement in charlotte['Sleeping Arrangement']">
+                {{arrangement}}
+            </div>
         </div>
     </div>
 
-    <!--{{charlotte['Host Name']}} can be contacted at <a href="tel:{{charlotte['Host Phone Number']}}">{{charlotte['Host Phone Number']}}</a><br>-->
-    <span class="bold">About this Listing: </span>{{charlotte['About Listing']}}<br><br>
-    <span class="bold">Number of Bathrooms: </span>{{charlotte['Number of Bathrooms']}}<br>
-    <span class="bold">Number of Bedrooms: </span>{{charlotte['Number of Bedrooms']}}<br>
-    <span class="bold">Number of Beds: </span>{{charlotte['Number of Beds']}}<br>
-    <br>
-    The sleeping arrangement is given below.
-    <div ng-repeat="arrangement in charlotte['Sleeping Arrangement']">
-        {{arrangement}}
-    </div>
-    <br>
-    <span class="bold">Room type: </span>{{charlotte['Room Type']}}<br>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <span class="bold">Room type: </span>{{charlotte['Room Type']}}<br>
 
-    <br>
+            <br>
 
-    <ul class="collection with-header">
-        <li class="collection-header"><h4>Amenities</h4></li>
-        <div ng-repeat="amenity in charlotte['Amenities']">
-            <li class="collection-item">{{amenity}}</li>
-        </div>
-    </ul>
-    <br>
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>Amenities</h4></li>
+                <div ng-repeat="amenity in charlotte['Amenities']">
+                    <li class="collection-item">{{amenity}}</li>
+                </div>
+            </ul>
+            <br>
 
-    <span class="bold">Directions: </span><span style="white-space: pre-line; word-wrap: break-word">{{charlotte['Directions']}}</span>
-    <br><br><span class="bold">House Manual: </span><span style="white-space: pre-line; word-wrap: break-word">{{charlotte['House Manual']}}</span>
-    <br><br><span class="bold">The Space: </span><span style="white-space: pre-line; word-wrap: break-word">{{charlotte['The Space']}}</span>
-    <br><br><span class="bold">Guest Access: </span><span style="white-space: pre-line; word-wrap: break-word">{{charlotte['Guest Access']}}</span>
-    <br><br><span class="bold">Interaction with Guests: </span><span style="white-space: pre-line; word-wrap: break-word">{{charlotte['Interaction with Guests']}}</span>
 
-    <br><br><span class="bold">House Rules: </span>{{charlotte['House Rules']}}<br>
-    <br><span class="bold">Total Cost of the Airbnb: </span>${{charlotte['Total Cost of the place']}}<br>
-    <br><span class="bold">The Neighborhood: </span> <span style="white-space: pre-line; word-wrap: break-word">{{charlotte['The Neighborhood']}}<br></span>
-    <br><span class="bold" >Getting Around: </span><span style="white-space: pre; word-wrap: break-word">{{charlotte['Getting Around']}}
+            <span class="bold">House Rules: </span>{{charlotte['House Rules']}}<br><br>
+            <span class="bold">Total Cost of the Airbnb: </span>${{charlotte['Total Cost of the place']}}<br><br>
+            <span class="bold">The Neighborhood: </span> <span style="white-space: pre-line; word-wrap: break-word">{{charlotte['The Neighborhood']}}<br></span>
+            <br><span class="bold" >Getting Around: <br></span><span style="white-space: pre; word-wrap: break-word">{{charlotte['Getting Around']}}
     </span>
-
-
+        </div>
+    </div>
 </div>
 
 <scroll-up-button/>
