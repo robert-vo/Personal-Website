@@ -1,6 +1,7 @@
 {
   "City Name": "Philadelphia",
   "Hotel Name" : "Sleep Inn Philadelphia",
+  "Hotel Image": "https://www.choicehotels.com/hotelmedia/US/PA/philadelphia/PA683/2048/Exterior2.JPG",
   "Hotel Phone Number" : "(267) 417-8288",
   "Hotel Confirmation": "26723840",
   "Hotel Itinerary": "6672615191",
@@ -8,15 +9,20 @@
   "Check-out": "Sat, Jun 25",
   "Megabus Stop": "30th St Station, Philadelphia, PA",
   "Hotel Address": "1020 Cherry Street Philadelphia, PA 19107",
-  "Sleeping Arrangement": [
-    "2 Queen Beds"
-  ],
-  "Room Type": "Entire home/apt",
+  "Number of Nights": 2,
+  "Number of Rooms": 1,
+  "Number of Beds": 2,
+  "Room Type": "2 Queen Beds",
   "Amenities" : [
-    "Fitness Center",
-    "Business Center",
-    "Resturant(s)",
+    "Fitness center",
+    "Business center",
+    "Restaurant(s)",
     "Internet Access"
   ],
-  "Total Cost of the place": 177.40
+  "Total Cost of the place": 177.40,
+  "Megabus Reservation Number To This City": "1/5-1248-062316-M31R-1700-WAS-PHI",
+  "Megabus Reservation Number Leaving This City": "6/10-4065-062516-M21R-0350-PHI-NEW",
+  "Megabus Arrival Time": "June 23rd, 08:10PM",
+  "Megabus Departure Time": "June 25th, 03:50AM"
+
 }
