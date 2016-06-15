@@ -23,11 +23,13 @@
 <div ng-include="'navigationBar.html'"></div>
 <div ng-controller="newYorkCityController">
     <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m4 l4">
             <p>You are going to <span class="bold">{{nyc['City Name']}}!</span><br>
             </p>
         </div>
-        <div class="col s12 m6 l6"><p><span class="bold">Hotel Reservation Number: </span>{{nyc['Reservation Number']}}.<br>
+        <div class="col s12 m4 l4"><p><span class="bold">Hotwire Reservation Number: </span>{{nyc['Hotel Confirmation']}}<br>
+        </p></div>
+        <div class="col s12 m4 l4"><p><span class="bold">Hotwire Itinerary Number: </span>{{nyc['Hotel Itinerary']}}<br>
         </p></div>
     </div>
     <div class="row">
