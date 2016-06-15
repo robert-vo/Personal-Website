@@ -25,3 +25,8 @@ body {
 .smallAnchorTag {
     font-size: 24px;
 }
+
+.fixAnchorTagSpacing {
+    all: revert;
+    font-size: 24px;
+}

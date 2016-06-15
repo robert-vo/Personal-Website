@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Washington D.C.</title>
-    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/city.css">
     <link rel="stylesheet" href="../resources/libraries/material-scrolltop-0.6.4/src/material-scrolltop.css">
 </head>
 
@@ -15,15 +15,120 @@
     function set_body_height() { // set body height = window height
         $('body').height($(window).height());
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
         $(window).bind('resize', set_body_height);
         set_body_height();
     });
 </script>
-
 <div ng-include="'navigationBar.html'"></div>
+<div ng-controller="washingtonDcController">
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <p>You are going to <span class="bold">{{dc['City Name']}}!</span><br>
+            </p>
+        </div>
+        <div class="col s12 m6 l6"><p><span class="bold">Airbnb Reservation code: </span>{{dc['Reservation Code']}}.<br>
+        </p></div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Megabus Arrival Time:
+                    </span>
+                {{dc['Megabus Arrival Time']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Airbnb Check In Details:
+                    </span>
+                {{dc['Check-in']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Megabus Departure Time:
+                    </span>
+                {{dc['Megabus Departure Time']}}
+            </p>
+        </div>
+        <div class="col s6">
+            <p>
+                    <span class="bold">
+                        Airbnb Check Out Details:
+                    </span>
+                {{dc['Check-out']}}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Address: </span>{{dc['Megabus Stop']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{dc['Megabus Stop']}}">Open Megabus Stop in Google Maps</a>
+        </div>
+        <div class="col s12 m6 l6">
+            <span class="bold">Airbnb Address: </span>{{dc['Airbnb Address']}}<br>
+            <a class ="smallAnchorTag" href="http://www.google.com/maps/place/{{dc['Airbnb Address']}}">Open Airbnb Address in Google Maps</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Reservation Number From NOL to ATL: </span>{{dc['Megabus Reservation Number To This City']}}<br><br>
+        </div>
+        <div class="col s12 m6 l6">
+            <span class="bold">Megabus Reservation Number From ATL to CL: </span>{{dc['Megabus Reservation Number Leaving This City']}}<br>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{dc['Host Image']}}">
+                    <span class="card-title"><h5>Your Host, {{dc['Host Name']}}</h5></span>
+                </div>
+                <div class="card-content">
+                    <p>{{dc['Host Name']}} can be contacted at {{dc['Host Phone Number']}}.<br></p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l8">
+            <span class="bold">About this Listing: </span>{{dc['About Listing']}}<br><br>
+            <span class="bold">Number of Bathrooms: </span>{{dc['Number of Bathrooms']}}<br>
+            <span class="bold">Number of Bedrooms: </span>{{dc['Number of Bedrooms']}}<br>
+            <span class="bold">Number of Beds: </span>{{dc['Number of Beds']}}<br><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <span class="bold">Room type: </span>{{dc['Room Type']}}<br><br>
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>Amenities</h4></li>
+                <div ng-repeat="amenity in dc['Amenities']">
+                    <li class="collection-item">{{amenity}}</li>
+                </div>
+            </ul>
+            <br>
+            <span class="bold">House Rules: </span>{{dc['House Rules']}}<br><br>
+            <span class="bold">House Manual: </span><a class="fixAnchorTagSpacing" href="{{dc['House Manual']}}">Click here to open the house manual.</a><br><br>
+            <span class="bold">Wifi Network: </span>{{dc['Wifi Network']}}<br>
+            <span class="bold">Wifi Password: </span>{{dc['Wifi Password']}}<br><br>
 
+            <span class="bold">Total Cost of the Airbnb: </span>${{dc['Total Cost of the place']}}<br>
+            <br><span class="bold" >Directions: </span><span style="white-space: pre-line; word-wrap: break-word">{{dc['Directions']}}</span><br>
+            <br><span class="bold" >The Space: </span><span style="white-space: pre-line; word-wrap: break-word">{{dc['The Space']}}</span><br>
+            <br><span class="bold" >Guest Access: </span><span style="white-space: pre-line; word-wrap: break-word">{{dc['Guest Access']}}</span><br>
+            <br><span class="bold" >Interaction with Guests: </span><span style="white-space: pre-line; word-wrap: break-word">{{dc['Interaction with Guests']}}</span><br><br>
+
+            <span class="bold">The Neighborhood: </span> <span style="white-space: pre-line; word-wrap: break-word">{{dc['The Neighborhood']}}<br></span>
+            <br><span class="bold" >Getting Around: <br></span><span style="white-space: pre-line; word-wrap: break-word">{{dc['Getting Around']}}
+                </span>
+        </div>
+    </div>
+</div>
 <scroll-up-button/>
-
 </body>
 </html>
