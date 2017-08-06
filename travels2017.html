@@ -1,247 +1,100 @@
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<script src="https://use.fontawesome.com/8d83ad3696.js"></script>
-<a id='box' class="waves-effect waves-light btn" href='index.html'>back home</a>
+<html ng-app="travelsApp">
 
-<h3>Places traveled to in 2017</h3>
-<table class="bordered">
-    <thead>
-    <tr>
-        <th>Dates</th>
-        <th>Places Visited</th>
-        <th>Links</th>
-    </tr>
-    </thead>
+<head>
+    <link href="resources/css/MaterialIcons.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="resources/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="resources/css/materialize.min.css">
+    <script src="resources/js/jquery-3.0.0.min.js"></script>
+    <script src="resources/js/angular.min.js"></script>
+    <script src="resources/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="resources/libraries/material-scrolltop-0.6.4/src/material-scrolltop.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://use.fontawesome.com/8d83ad3696.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        function set_body_height() { // set body height = window height
+            $('body').height($(window).height());
+        }
+        $(document).ready(function () {
+            $(window).bind('resize', set_body_height);
+            set_body_height();
+        });
+    </script>
+</head>
 
-    <tbody>
-    <tr>
-        <td>January 2nd - January 27th</td>
-        <td>Austin, TX<br>Dallas, TX<br>Fort Worth, TX<br>Los Angeles, CA<br>Santa Ana, CA<br>La Jolla, CA<br>San Diego, CA<br>Orange, CA<br>Seattle, WA<br>Port Angeles, WA<br>Olympic National Park, Port Angeles, WA<br>Cape Flattery, Clallam County, WA<br>Seattle, WA<br>Portland, OR<br>Salt Lake City, UT<br>Alta, UT<br>Denver, CO<br>Roxborough State Park, Littleton, CO<br>Austin, TX<br>San Antonio, TX</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>February 1st - February 3rd</td>
-        <td>Austin, TX</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>February 4th</td>
-        <td>Moved to Plano, TX!</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>February 6th - February 11th</td>
-        <td>Seattle, WA<br>Snoqualmie, WA<br>Bellevue, WA<br>Deception Pass State Park, Oak Harbor, WA<br>Orcas Island, WA<br>Morgan State Park, Orcas Island, WA</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>February 12th - February 18th</td>
-        <td>Richmond, VA</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>February 18th - February 20th</td>
-        <td>Reston, VA<br>Washington, D.C.</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>March 3rd - March 5th</td>
-        <td>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>March 27th - March 31st</td>
-        <td>Beaumont, TX<br>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>April 7th - April 9th</td>
-        <td>Houston, TX<br>Waco, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>April 13th - April 17th</td>
-        <td>Denver, CO<br>Frisco, CO<br>St. Mary's Glacier, Idaho Springs, CO<br>Hartsel, CO</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>April 17th - April 21st</td>
-        <td>Richmond, VA</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>April 22nd - April 24th</td>
-        <td>Fort Worth, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>May 11th - May 14th</td>
-        <td>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>May 18th - May 21st</td>
-        <td>Austin, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>May 24th - May 30th</td>
-        <td>Denver, CO<br>Boulder, CO<br>Lookout Mountain Park, CO<br>Garden of the Gods, Colorado Springs, CO<br>The Broadmoor Seven Falls, Colorado Springs, CO<br>Hanging Lake, Glenwood Springs, CO<br>Frisco, CO</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>June 2nd - June 4th</td>
-        <td>Austin, TX<br>Lake Travis, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>June 9th - June 11th</td>
-        <td>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>June 15th - June 19th</td>
-        <td>Las Vegas, NV (EDC 2017)</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>June 23rd - June 26th</td>
-        <td>Great Sand Dunes National Park, CO<br>Denver, CO</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>June 30th - July 9th</td>
-        <td>Oklahoma City, OK<br>
-            Topeka, KS<br>
-            Kansas City, KS/MO (Joe's Kansas City Bar-B-Que)<br>
-            Jefferson City, MO<br>
-            St. Louis, MO / Cahokia, IL (Pappy's Smokehouse)<br>
-            Evansville, IN <br>
-            Louisville, KY (Yummy Pollo Peruvian Charcoal Chicken)<br>
-            Mammoth Cave National Park, KY<br>
-            Nashville, TN (Party Fowl / Hattie B's Hot Chicken)<br>
-            Memphis, TN (Blues City Cafe)<br>
-            Little Rock, AK<br>
-            Hot Springs, AK / Hot Springs National Park (McClard's Bar-B-Q Restaurant)<br>
-            Austin, TX (Black's BBQ)<br>
-            Inks Lake State Park, TX
-        </td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>July 27th - July 30th</td>
-        <td>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    </tbody>
-</table>
+<div ng-include="'navigationBar.html'"></div>
 
 
-<h3>
-    Future travels in 2017
-</h3>
-<h5>
-    To be planned: san antonio, shreveport, northwest arkansas (2x), oklahoma city, carlsbad/guadalupe, new york city, boston, minneapolis, salt lake city/zion, denver, pittsburgh
-</h5>
-<table class="bordered">
-    <thead>
-    <tr>
-        <th>Dates</th>
-        <th>Places to visit</th>
-        <th>Links</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<div ng-controller="travelsController">
+    <h3>
+        Places traveled to in 2017
+    </h3>
+    <table class="bordered">
+        <thead>
         <tr>
-            <td>August 11th - August 13th</td>
-            <td>Houston, TX</td>
-            <td></td>
+            <th>
+                Dates
+            </th>
+            <th>
+                Places Visited
+            </th>
+            <th>
+                Links
+            </th>
         </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="trip in travels['Completed Trips']">
+                <td>
+                    {{trip.Dates}}
+                </td>
+                <td>
+                    <li ng-repeat="places in trip['Places Visited'] track by $index">
+                        {{places}}<br>
+                    </li>
+                </td>
+                <td>
+                    <span ng-repeat="link in trip['Relevant Links']">
+                        {{link}}
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>
+        Future travels in 2017
+    </h3>
+    <h5>
+        To be planned: san antonio, shreveport, northwest arkansas (2x), oklahoma city, carlsbad/guadalupe, new york city, boston, minneapolis, salt lake city/zion, denver, pittsburgh
+    </h5>
+
+    <table class="bordered">
+        <thead>
         <tr>
-            <td>August 17th - August 21st</td>
-            <td>Lubbock, TX<br>Marfa, TX<br>Big Bend National Park, TX</td>
-            <td></td>
+            <th>
+                Dates
+            </th>
+            <th>
+                Places Planning to Visit
+            </th>
         </tr>
-        <tr>
-            <td>August 23rd - September 5th</td>
-            <td>Seattle, WA<br>Vancouver, BC<br>Calgary, AB</td>
-            <td></td>
+        </thead>
+        <tbody>
+        <tr ng-repeat="trip in travels['Future Trips']">
+            <td>
+                {{trip.Dates}}
+            </td>
+            <td>
+                <li ng-repeat="places in trip['Places to Visit'] track by $index">
+                    {{places}}<br>
+                </li>
+            </td>
         </tr>
-    <tr>
-        <td>
-            September 8th - September 11th
-        </td>
-        <td>San Francisco, CA</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>October 4th - October 10th</td>
-        <td>Washington, D.C.</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>October 20th - October 23rd</td>
-        <td>Los Angeles, CA</td>
-        <td></td>
-    </tr>
+        </tbody>
+    </table>
+</div>
+<scroll-up-button/>
 
-    <tr>
-        <td>November 1st - November 7th</td>
-        <td>San Francisco, CA</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>November 9th - November 13th</td>
-        <td>Chicago, IL</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>November 22nd - November 26th</td>
-        <td>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>December 22nd - December 25th</td>
-        <td>Houston, TX</td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>December 26th - January 2nd, 2018</td>
-        <td>3 countries not in north america :)</td>
-        <td></td>
-    </tr>
-
-    </tbody>
-</table>
+</html>
