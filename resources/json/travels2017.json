@@ -190,9 +190,7 @@
         "Houston, TX"
       ],
       "Relevant Links": []
-    }
-  ],
-  "Future Trips": [
+    },
     {
       "Dates": "August 11th - August 13th",
       "Places to Visit": [
@@ -200,13 +198,17 @@
       ]
     },
     {
-      "Dates": "August 17th - August 21st",
+      "Dates": "August 16th - August 21st",
       "Places to Visit": [
         "Lubbock, TX",
+        "Alpine, TX",
         "Marfa, TX",
-        "Big Bend National Park, TX"
+        "Big Bend National Park, TX",
+        "Terlingua, TX"
       ]
-    },
+    }
+  ],
+  "Future Trips": [
     {
       "Dates": "August 23rd - September 5th",
       "Places to Visit": [
@@ -288,9 +290,9 @@
       ]
     },
     {
-      "Dates": "December 1st - December 3rd",
+      "Dates": "November 30th - December 3rd",
       "Places to Visit": [
-        "TBA"
+        "Minneapolis, MN"
       ]
     },
     {
