@@ -193,19 +193,21 @@
     },
     {
       "Dates": "August 11th - August 13th",
-      "Places to Visit": [
+      "Places Visited": [
         "Houston, TX"
-      ]
+      ],
+      "Relevant Links": []
     },
     {
       "Dates": "August 16th - August 21st",
-      "Places to Visit": [
+      "Places Visited": [
         "Lubbock, TX",
         "Alpine, TX",
         "Marfa, TX",
         "Big Bend National Park, TX",
         "Terlingua, TX"
-      ]
+      ],
+      "Relevant Links": []
     }
   ],
   "Future Trips": [
