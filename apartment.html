@@ -22,8 +22,9 @@
 </script>
 <style>
     .imgwrapper {
+		max-width: 100%;
         width: 99%;
-        height: 99%;
+        height: auto;
     }
 </style>
 <div ng-include="'navigationBar.html'"></div>
@@ -55,8 +56,8 @@
 			<span class="bold">Number of Beds: </span>{{apartment['Number of Beds']}}<br><br>
             <span class="bold">Directions: </span><span style="white-space: pre-line; word-wrap: break-word">{{apartment['Directions']}}</span><br><br>
             <span class="bold">Parking: </span>{{apartment['Parking']}}<br><br>
-            <span class="bold">Picture For Reference: </span>
-            <img src="{{apartment['Parking Image']}}" class="imgwrapper"><br><br>
+            <span class="bold">Picture For Reference: </span><br/>
+            <img src="{{apartment['Parking Image']}}" class="imgwrapper center-align"><br><br>
             <span class="bold">Getting Inside the Complex: </span>{{apartment['Getting Inside the Complex']}}<br><br>
             <span class="bold">Getting to My Apartment Room: </span>{{apartment['Getting to My Apartment']}}<br>
 

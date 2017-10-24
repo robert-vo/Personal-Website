@@ -208,59 +208,54 @@
         "Terlingua, TX"
       ],
       "Relevant Links": []
-    }
-  ],
-  "Future Trips": [
+    },
     {
-      "Dates": "August 23rd - September 5th",
-      "Places to Visit": [
+      "Dates": "August 23rd - September 6th",
+      "Places Visited": [
         "Seattle, WA",
         "Vancouver, BC",
-        "Calgary, AB"
-      ]
+        "Calgary, AB",
+        "Banff National Park, AB",
+        "Waterton National Park, AB",
+        "Glacier National Park, MT"
+      ],
+      "Relevant Links": []
     },
     {
       "Dates": "September 8th - September 11th",
-      "Places to Visit": [
-        "San Francisco, CA"
-      ]
-    },
-    {
-      "Dates": "September 15th - September 17th",
-      "Places to Visit": [
-        "TBA"
-      ]
-    },
-    {
-      "Dates": "September 22nd - September 24th",
-      "Places to Visit": [
-        "Staying home for Plano Hot Air Balloon Festival"
-      ]
+      "Places Visited": [
+        "San Francisco, CA",
+        "San Jose, CA",
+        "Santa Cruz, CA"
+      ],
+      "Relevant Links": []
     },
     {
       "Dates": "September 29th - October 1st",
-      "Places to Visit": [
-        "TBA"
-      ]
+      "Places Visited": [
+        "Houston, TX"
+      ],
+      "Relevant Links": []
     },
     {
       "Dates": "October 4th - October 10th",
-      "Places to Visit": [
-        "Washington, D.C."
-      ]
-    },
-    {
-      "Dates": "October 13th - October 15th",
-      "Places to Visit": [
-        "TBA (might be at home)"
-      ]
+      "Places Visited": [
+        "Washington, D.C.",
+        "Fairfax County, Virginia"
+      ],
+      "Relevant Links": []
     },
     {
       "Dates": "October 20th - October 23rd",
-      "Places to Visit": [
-        "Los Angeles, CA"
-      ]
-    },
+      "Places Visited": [
+        "Los Angeles, CA",
+        "Orange County, CA",
+        "Joshua Tree National Park, CA"
+      ],
+      "Relevant Links": []
+    }
+  ],
+  "Future Trips": [
     {
       "Dates": "October 27th - October 29th",
       "Places to Visit": [
